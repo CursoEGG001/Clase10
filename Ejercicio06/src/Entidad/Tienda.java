@@ -81,40 +81,40 @@ public class Tienda {
         }
     }
 
-    public void ejecutar() {
-        boolean salir = false;
-
-        while (!salir) {
-            System.out.println("\n-- Menú de opciones --");
-            System.out.println("1. Agregar producto");
-            System.out.println("2. Modificar precio de un producto");
-            System.out.println("3. Eliminar producto");
-            System.out.println("4. Mostrar inventario");
-            System.out.println("5. Salir");
-
-            System.out.print("Ingrese una opción: ");
-            int opcion = scanner.nextInt();
-            scanner.nextLine(); // Limpiar el buffer del scanner
-
-            switch (opcion) {
-                case 1:
-                    agregarProducto();
-                    break;
-                case 2:
-                    modificarPrecio();
-                    break;
-                case 3:
-                    eliminarProducto();
-                    break;
-                case 4:
-                    mostrarInventario();
-                    break;
-                case 5:
-                    salir = true;
-                    break;
-                default:
-                    System.out.println("Opción inválida.");
-            }
-        }
-    }
+//    public void ejecutar() {
+//        boolean salir = false;
+//
+//        while (!salir) {
+//            System.out.println("\n-- Menú de opciones --");
+//            System.out.println("1. Agregar producto");
+//            System.out.println("2. Modificar precio de un producto");
+//            System.out.println("3. Eliminar producto");
+//            System.out.println("4. Mostrar inventario");
+//            System.out.println("5. Salir");
+//
+//            System.out.print("Ingrese una opción: ");
+//            int opcion = scanner.nextInt();
+//            scanner.nextLine(); // Limpiar el buffer del scanner
+//
+//            switch (opcion) {
+//                case 1:
+//                    agregarProducto();
+//                    break;
+//                case 2:
+//                    modificarPrecio();
+//                    break;
+//                case 3:
+//                    eliminarProducto();
+//                    break;
+//                case 4:
+//                    mostrarInventario();
+//                    break;
+//                case 5:
+//                    salir = true;
+//                    break;
+//                default:
+//                    System.out.println("Opción inválida.");
+//            }
+//        }
+//    }
 }
