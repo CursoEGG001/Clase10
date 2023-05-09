@@ -4,23 +4,14 @@
  */
 package Entidad;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
 import java.util.Scanner;
-import java.util.Set;
+import java.util.TreeSet;
 
-/**
- *
- * @author pc
- */
 public class PonePais {
 
     public static void Cargar() {
         Scanner sc = new Scanner(System.in);
-        Set<String> paises = new HashSet<>();
+        TreeSet<String> paises = new TreeSet<>();
 
         // Bucle para pedir países al usuario
         boolean seguir = true;
@@ -50,10 +41,8 @@ public class PonePais {
         }
 
         // Ordenar el conjunto alfabéticamente y mostrarlo
-        List<String> paisesOrdenados = new ArrayList<>(paises);
-        Collections.sort(paisesOrdenados);
         System.out.println("Países ordenados alfabéticamente: ");
-        for (String pais : paisesOrdenados) {
+        for (String pais : paises) {
             System.out.println("- " + pais);
         }
 
@@ -62,13 +51,12 @@ public class PonePais {
         String paisAEliminar = sc.nextLine();
 
         // Buscar el país en el conjunto y eliminarlo si se encuentra
-        Iterator<String> it = paises.iterator();
         boolean encontrado = false;
-        while (it.hasNext()) {
-            String pais = it.next();
+        for (String pais : paises) {
             if (pais.equalsIgnoreCase(paisAEliminar)) {
-                it.remove();
+                paises.remove(pais);
                 encontrado = true;
+                break;
             }
         }
 
@@ -85,3 +73,4 @@ public class PonePais {
         sc.close();
     }
 }
+
