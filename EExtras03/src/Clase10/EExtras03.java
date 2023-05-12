@@ -30,64 +30,64 @@ import java.util.Scanner;
 public class EExtras03 {
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in).useDelimiter("\n"); //NOI18N
+        Scanner scanner = new Scanner(System.in).useDelimiter("\n");
 
         Library library = new Library();
 
         int choice;
 
-        System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("WELCOME TO THE LIBRARY! WHAT WOULD YOU LIKE TO DO?"));
-        System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("1. ADD A BOOK"));
-        System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("2. LOAN A BOOK"));
-        System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("3. RETURN A BOOK"));
-        System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("4. LIST ALL BOOKS"));
-        System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("5. EXIT"));
+        System.out.println("Welcome to the library! What would you like to do?");
+        System.out.println("1. Add a book");
+        System.out.println("2. Loan a book");
+        System.out.println("3. Return a book");
+        System.out.println("4. List all books");
+        System.out.println("5. Exit");
 
         while ((choice = scanner.nextInt()) != 5) {
             switch (choice) {
                 case 1:
-                    System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("ENTER THE TITLE OF THE BOOK: "));
+                    System.out.println("Enter the title of the book: ");
                     String title = scanner.next();
-                    System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("ENTER THE AUTHOR OF THE BOOK: "));
+                    System.out.println("Enter the author of the book: ");
                     String author = scanner.next();
-                    System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("ENTER THE NUMBER OF COPIES OF THE BOOK: "));
+                    System.out.println("Enter the number of copies of the book: ");
                     int numCopies = scanner.nextInt();
                     library.addBook(title, author, numCopies);
 
                     break;
                 case 2:
-                    System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("ENTER THE TITLE OF THE BOOK YOU WANT TO LOAN: "));
+                    System.out.println("Enter the title of the book you want to loan: ");
                     String loanTitle = scanner.nextLine();
                     if (library.loanBook(loanTitle)) {
-                        System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("THE BOOK HAS BEEN LOANED."));
+                        System.out.println("The book has been loaned.");
                     } else {
-                        System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("THE BOOK COULD NOT BE LOANED."));
+                        System.out.println("The book could not be loaned.");
                     }
                     break;
                 case 3:
-                    System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("ENTER THE TITLE OF THE BOOK YOU WANT TO RETURN: "));
+                    System.out.println("Enter the title of the book you want to return: ");
                     String returnTitle = scanner.next();
                     if (library.returnBook(returnTitle)) {
-                        System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("THE BOOK HAS BEEN RETURNED."));
+                        System.out.println("The book has been returned.");
                     } else {
-                        System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("THE BOOK COULD NOT BE RETURNED."));
+                        System.out.println("The book could not be returned.");
                     }
                     break;
                 case 4:
                     System.out.println(library);
                     break;
                 default:
-                    System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("INVALID CHOICE."));
+                    System.out.println("Invalid choice.");
                     break;
             }
-            System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("WELCOME TO THE LIBRARY! WHAT WOULD YOU LIKE TO DO?"));
-            System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("1. ADD A BOOK"));
-            System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("2. LOAN A BOOK"));
-            System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("3. RETURN A BOOK"));
-            System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("4. LIST ALL BOOKS"));
-            System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("5. EXIT"));
+            System.out.println("Welcome to the library! What would you like to do?");
+            System.out.println("1. Add a book");
+            System.out.println("2. Loan a book");
+            System.out.println("3. Return a book");
+            System.out.println("4. List all books");
+            System.out.println("5. Exit");
         }
 
-        System.out.println(java.util.ResourceBundle.getBundle("Clase10/Bundle").getString("GOODBYE!"));
+        System.out.println("Goodbye!");
     }
 }

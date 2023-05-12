@@ -13,11 +13,6 @@ public class Book {
     private String author;
     private int numCopies;
 
-    @Override
-    public String toString() {
-        return java.text.MessageFormat.format(java.util.ResourceBundle.getBundle("Entidad/Bundle").getString("BOOK : " + "[{0}] , {1}, HAS {2}COPIES"), new Object[] {title, author, numCopies});
-    }
-
     public Book() {
     }
 

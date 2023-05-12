@@ -47,12 +47,12 @@ public class Library {
                     book.setNumCopies(book.getNumCopies() - 1);
                     return true;
                 } else {
-                    System.out.println(java.util.ResourceBundle.getBundle("Entidad/Bundle").getString("NO COPIES OF THAT BOOK ARE AVAILABLE."));
+                    System.out.println("No copies of that book are available.");
                     return false;
                 }
             }
         }
-        System.out.println(java.util.ResourceBundle.getBundle("Entidad/Bundle").getString("THAT BOOK IS NOT IN THE LIBRARY."));
+        System.out.println("That book is not in the library.");
         return false;
     }
 
@@ -63,7 +63,7 @@ public class Library {
                 return true;
             }
         }
-        System.out.println(java.util.ResourceBundle.getBundle("Entidad/Bundle").getString("THAT BOOK IS NOT IN THE LIBRARY."));
+        System.out.println("That book is not in the library.");
         return false;
     }
 
