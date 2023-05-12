@@ -46,5 +46,10 @@ public class Book {
         this.numCopies = numCopies;
     }
 
+    @Override
+    public String toString() {
+        return "Book :\n" + " [" + title + "], " + author + ", has " + numCopies + " copies";
+    }
+
 
 }
