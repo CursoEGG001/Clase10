@@ -1,0 +1,13 @@
+@startuml
+class Agenda.AgendaTelefonica
+class java.util.HashMap
+class java.util.Map
+class java.util.Scanner
+class java.util.TreeMap
+class mExtra01.AgTel
+Agenda.AgendaTelefonica ..> java.util.HashMap
+Agenda.AgendaTelefonica ..> java.util.Map
+Agenda.AgendaTelefonica ..> java.util.TreeMap
+mExtra01.AgTel ..> Agenda.AgendaTelefonica
+mExtra01.AgTel ..> java.util.Scanner
+@enduml
