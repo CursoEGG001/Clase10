@@ -29,37 +29,50 @@ public class MExtras01 {
         AgendaServicio as2 = new AgendaServicio();
         HashMap<String, Integer> hm1 = new HashMap();
 
-        System.out.println("Escriba una opcion(o 5 para salir):");
-        System.out.println("1. Agregar contacto");
-        System.out.println("2. Buscar un Contacto");
-        System.out.println("3. Mostrar los Contactos:");
-
-        int vale = opc.nextInt();
+        int vale;
         do {
-
+            System.out.println("Escriba una opcion(o 5 para salir):");
+            System.out.println("1. Agregar contacto");
+            System.out.println("2. Buscar un Contacto");
+            System.out.println("3. Mostrar los Contactos:");
+            vale = opc.nextInt();
             switch (vale) {
                 case 1:
-                    as2.agregaContacto(hm1);
+                    AgendaTelefonica uno = new AgendaTelefonica();
+                    uno = as2.agregaContacto(hm1);
+                    if (uno != null) {
+                        hm1.put(uno.getNomContacto(), uno.getNumContacto());
+                        System.out.println("Se agregó un contacto");
+                    } else {
+                        System.out.println("No existen adatos para agregar.");
+                    }
 
                     break;
                 case 2:
-                    String laBusca = opc.next();
-                    as2.buscaContacto(laBusca);
+                    if (!hm1.isEmpty()) {
+                        String laBusca = opc.next();
+                        as2.buscaContacto(laBusca, hm1);
+                    } else {
+                        System.out.println("No hay datos donde buscar.");
+                    }
 
                     break;
                 case 3:
-                    System.out.println("Lista por nombres:");
-                    as2.muestraContactos("nom", hm1);
-                    System.out.println("Lista por numeros:");
-                    as2.muestraContactos("num", hm1);
-                    System.out.println("La lista asi nomas:");
-                    as2.muestraContactos("", hm1);
-
+                    if (!hm1.isEmpty()) {
+                        System.out.println("Lista por nombres:");
+                        as2.muestraContactos("nom", hm1);
+                        System.out.println("Lista por numeros:");
+                        as2.muestraContactos("num", hm1);
+                        System.out.println("La lista asi nomas:");
+                        as2.muestraContactos("", hm1);
+                    } else {
+                        System.out.println("No disponible ahora.");
+                    }
                     break;
                 default:
                     System.out.println("Saliendo");
             }
-            vale = opc.nextInt();
+
         } while (vale != 5);
 
     }
