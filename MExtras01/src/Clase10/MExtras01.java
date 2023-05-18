@@ -50,6 +50,7 @@ public class MExtras01 {
                     break;
                 case 2:
                     if (!hm1.isEmpty()) {
+                        System.out.println("Ingrese un nombre de busqueda: ");
                         String laBusca = opc.next();
                         as2.buscaContacto(laBusca, hm1);
                     } else {
