@@ -64,7 +64,7 @@ public class AgendaServicio {
                 for (Integer esteNumero : ordenPorNum) {
                     for (Entry<String, Integer> esteDeAqui : laAgenda.entrySet()) {
                         if (!esteDeAqui.getValue().equals(esteNumero)) {
-                            System.out.println("No tiene número...");
+                            //System.out.println("No tiene número...");
                         } else {
                             System.out.println(esteDeAqui);
                             agendaOrdenadaNum.put(esteDeAqui.getKey(), esteDeAqui.getValue());
