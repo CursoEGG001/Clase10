@@ -27,10 +27,10 @@ public class MExtras03 {
         personas.add(new Persona("Zetulio Vargas"));
 
         HashSet<String> nombres = NombresServicio.getNombres(personas);
-        System.out.println(nombres); // Imprime [Juan Pérez, María López]
+        System.out.println(nombres); // Imprime [María López, Juan Pérez]
 
         TreeSet<String> nombresOrdenados = NombresServicio.getNombresOrdenados(nombres);
-        System.out.println(nombresOrdenados); // Imprime [María López, Juan Pérez]
+        System.out.println(nombresOrdenados); // Imprime [Juan Pérez, María López]
 
     }
 
